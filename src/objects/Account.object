@@ -1016,11 +1016,57 @@ IF(NOT(ISNULL($Setup.npo02__Households_Settings__c.npo02__Membership_Grace_Perio
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Number_Of_Years_In_RLLP__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Years Given in the Past Y Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Consecutive_Years_RLLP__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Consecutive Years Given</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Number_of_Household_Members__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>for Household Accounts, the number of Contacts in the Household.</inlineHelpText>
         <label>Number of Household Members</label>
         <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Years_Donated_Since_Y_RLLP__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Years Given Since X Date</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Years_RLLP__c</fullName>
+        <description>Lifetime total number of unique years this donor has given a donation within, including this fiscal year</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lifetime total number of unique years this donor has given a donation within, including this fiscal year</inlineHelpText>
+        <label>Total Number of Years Given</label>
+        <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
         <trackFeedHistory>false</trackFeedHistory>

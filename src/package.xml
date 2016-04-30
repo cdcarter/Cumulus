@@ -149,6 +149,8 @@
         <members>REL_Relationships_TDTM</members>
         <members>REL_Relationships_TEST</members>
         <members>REL_Utils</members>
+        <members>RLLP_Consecutives</members>
+        <members>RLLP_Consecutives_TEST</members>
         <members>RLLP_OppAccRollup_BATCH</members>
         <members>RLLP_OppContactRollup_BATCH</members>
         <members>RLLP_OppHouseholdRollup_BATCH</members>
@@ -161,6 +163,7 @@
         <members>RLLP_OppRollup_TEST2</members>
         <members>RLLP_OppRollup_UTIL</members>
         <members>RLLP_OppSoftCreditRollup_BATCH</members>
+        <members>RLLP_Rollups_API</members>
         <members>STG_DataBoundMultiSelect_CTRL</members>
         <members>STG_InstallScript</members>
         <members>STG_InstallScript_TEST</members>
@@ -366,7 +369,11 @@
         <members>Account.Matching_Gift_Request_Deadline__c</members>
         <members>Account.Membership_Span__c</members>
         <members>Account.Membership_Status__c</members>
+        <members>Account.Number_Of_Years_In_RLLP__c</members>
+        <members>Account.Number_of_Consecutive_Years_RLLP__c</members>
         <members>Account.Number_of_Household_Members__c</members>
+        <members>Account.Number_of_Years_Donated_Since_Y_RLLP__c</members>
+        <members>Account.Number_of_Years_RLLP__c</members>
         <members>Addr_Verification_Settings__c.Address_Verification_Endpoint__c</members>
         <members>Addr_Verification_Settings__c.Auth_ID__c</members>
         <members>Addr_Verification_Settings__c.Auth_Token__c</members>
@@ -647,10 +654,10 @@
         <members>Trigger_Handler__c.Object__c</members>
         <members>Trigger_Handler__c.Trigger_Action__c</members>
         <members>Trigger_Handler__c.User_Managed__c</members>
-        <members>npe01__Contacts_And_Orgs_Settings__c.Honoree_Opportunity_Contact_Role__c</members>
         <members>npe01__Contacts_And_Orgs_Settings__c.Automatic_Campaign_Member_Management__c</members>
         <members>npe01__Contacts_And_Orgs_Settings__c.Campaign_Member_Non_Responded_Status__c</members>
         <members>npe01__Contacts_And_Orgs_Settings__c.Campaign_Member_Responded_Status__c</members>
+        <members>npe01__Contacts_And_Orgs_Settings__c.Honoree_Opportunity_Contact_Role__c</members>
         <members>npe01__Contacts_And_Orgs_Settings__c.Household_Account_Addresses_Disabled__c</members>
         <members>npe01__Contacts_And_Orgs_Settings__c.Max_Payments__c</members>
         <members>npe01__Contacts_And_Orgs_Settings__c.Notification_Recipient_Opp_Contact_Role__c</members>
@@ -662,7 +669,9 @@
         <members>npe01__OppPayment__c.Payment_Acknowledged_Date__c</members>
         <members>npe01__OppPayment__c.Payment_Acknowledgment_Status__c</members>
         <members>npo02__Household__c.Number_of_Household_Members__c</members>
+        <members>npo02__Households_Settings__c.Donated_Since_Date__c</members>
         <members>npo02__Households_Settings__c.Matched_Donor_Role__c</members>
+        <members>npo02__Households_Settings__c.Number_of_Periods_Rollup__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -786,10 +795,8 @@
         <members>alloNegativeAmount</members>
         <members>alloNegativePercent</members>
         <members>alloPercentExceed100</members>
-        <members>alloRemainder</members>
         <members>alloSingleParent</members>
         <members>alloTotalExceedsOppAmt</members>
-        <members>alloTotals</members>
         <members>bdiAccountCustomIdError</members>
         <members>bdiBatchException</members>
         <members>bdiBtnClose</members>
@@ -1296,10 +1303,10 @@
         <name>CustomLabel</name>
     </types>
     <types>
-        <name>CustomLabel</name>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
     </types>
     <types>
-        <members>Account</members>
         <members>Addr_Verification_Settings__c</members>
         <members>Address_Verification_Settings__c</members>
         <members>Address__c</members>
@@ -1307,7 +1314,6 @@
         <members>Allocations_Settings__c</members>
         <members>Batch_Data_Entry_Settings__c</members>
         <members>Batch__c</members>
-        <members>Contact</members>
         <members>DataImport__c</members>
         <members>Data_Import_Settings__c</members>
         <members>Error_Settings__c</members>
@@ -1316,8 +1322,6 @@
         <members>General_Accounting_Unit__c</members>
         <members>Grant_Deadline__c</members>
         <members>Household_Naming_Settings__c</members>
-        <members>Lead</members>
-        <members>Opportunity</members>
         <members>Opportunity_Naming_Settings__c</members>
         <members>Partial_Soft_Credit__c</members>
         <members>Schedulable__c</members>
@@ -1407,9 +1411,6 @@
         <name>MatchingRule</name>
     </types>
     <types>
-        <name>MatchingRule</name>
-    </types>
-    <types>
         <members>Account.New_Address</members>
         <members>Account.New_Affiliation</members>
         <members>Account.Quick_Household_Update</members>
@@ -1478,10 +1479,6 @@
         <name>WebLink</name>
     </types>
     <types>
-        <members>Opportunity</members>
-        <name>Workflow</name>
-    </types>
-    <types>
         <members>Opportunity.Opportunity_Email_Acknowledgment</members>
         <name>WorkflowAlert</name>
     </types>
@@ -1496,5 +1493,5 @@
         <members>Opportunity.Opportunity Email Acknowledgment</members>
         <name>WorkflowRule</name>
     </types>
-    <version>33.0</version>
+    <version>35.0</version>
 </Package>

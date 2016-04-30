@@ -793,6 +793,14 @@ public without sharing class RLLP_OppRollup_UTIL {
 
         return fiscal_year;
     }
+    
+    public static Date getStartOfNFiscalYearsAgo(Integer n) {
+        Integer nYear = getCurrentFY()-n;
+        Organization orgInfo = [SELECT FiscalYearStartMonth, UsesStartDateAsFiscalYearName
+                				FROM Organization
+                				WHERE Id = :UserInfo.getOrganizationId()];
+        return Date.newInstance(nYear,(Integer)orgInfo.FiscalYearStartMonth,1);
+    }
 
     /**
      * @description Determine the fiscal year for the given date, fiscal year start month, and whether the fiscal year name is based on the start month or end month

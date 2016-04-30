@@ -522,6 +522,8 @@ public without sharing class UTIL_CustomSettingsFacade {
         hs.npo02__Soft_Credit_Roles__c = 'Matched Donor;Soft Credit;Household Member';
         hs.Matched_Donor_Role__c = 'Matched Donor';
         hs.npo02__Household_Contact_Roles_On__c = true;
+        hs.Donated_Since_Date__c = Date.newInstance(2010,01,01);
+        hs.Number_of_Periods_Rollup__c = 6;
                 
         // new HH Account model overrides having HH objects
         if (contactsSettings != null && contactsSettings.npe01__Account_Processor__c == CAO_Constants.HH_ACCOUNT_PROCESSOR)
@@ -660,6 +662,8 @@ public without sharing class UTIL_CustomSettingsFacade {
         householdsSettings.npo02__Household_Creation_Excluded_Recordtypes__c = mySettings.npo02__Household_Creation_Excluded_Recordtypes__c;
         householdsSettings.npo02__Household_Mailing_List_ID__c = mySettings.npo02__Household_Mailing_List_ID__c;
         householdsSettings.npo02__Schedule_Job_Limit__c = 25;
+        householdsSettings.Donated_Since_Date__c = mySettings.Donated_Since_Date__c;
+        householdsSettings.Number_of_Periods_Rollup__c = mySettings.Number_of_Periods_Rollup__c;
         orgHouseholdsSettings = householdsSettings;
  
         // if the caller explicitly is testing Household objects, make sure we have HH Accounts turned off.
